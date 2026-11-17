@@ -1,0 +1,26 @@
+
+public class SparseMatrix {
+    public static void main(String[] args) {
+        int a[][] = {
+            {0, 0, 3},
+            {0, 0, 0},
+            {4, 0, 0}
+        };
+
+        int zero = 0, nonZero = 0;
+
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++) {
+                if (a[i][j] == 0)
+                    zero++;
+                else
+                    nonZero++;
+            }
+
+        if (zero > nonZero)
+            System.out.println("Sparse Matrix");
+        else
+            System.out.println("Not a Sparse Matrix");
+    }
+}
+
